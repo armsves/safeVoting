@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Safe Voting</title>
+  <base href="/" />
+  <link rel="icon" href="favicon.ico" />
+  <link type="text/css" rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+  <main>
+    <img src="logo2.svg" alt="DFINITY logo" />
+    <br />
+    <section id="greeting" style="text-align: center; display: block;">You must be logged in to see the candidates and vote</section>
+    <form>
+      <button id="loginButton" style="display: block;">Login!</button>
+    </form>
+    <section id="admin" style="display: none;">
+      <h1 style="text-align: center;">Bienvenido Admin puede agregar candidatos o votar</h1>
+      <form>
+        Nombre del Candidato<input type="text" id="nombreCandidato">
+        <button id="createButton" onclick="createCandidate()">Create</button>
+      </form>
+      <br />
+    </section>
+    <form>
+      <select id="dropdown" style="display: none;"></select>
+      <button id="voteButton" onclick="voteForSelectedCandidate()" style="display: none;">Vote!</button>
+    </form>
+  </main>
+</body>
+
+</html>
